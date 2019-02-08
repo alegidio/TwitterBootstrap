@@ -16,7 +16,7 @@ use Cake\Utility\Inflector;
 
 $fields = collection($fields)
     ->filter(function($field) use ($schema) {
-        return $schema->columnType($field) !== 'binary';
+        return $schema->getColumnType($field) !== 'binary';
     });
 %>
 <div class="row">
